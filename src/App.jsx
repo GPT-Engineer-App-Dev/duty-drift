@@ -5,6 +5,7 @@ import { Home } from "lucide-react";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import Layout from "./layouts/sidebar"; // Use the sidebar layout
 import Index from "./pages/Index.jsx";
+import Tasks from "./pages/Tasks";
 const queryClient = new QueryClient();
 
 export const navItems = [
@@ -29,7 +30,7 @@ const App = () => {
           <Routes>
             <Route path="/" element={<Layout />}>
               <Route index element={<Index />} />
-              <Route path="tasks" element={<Tasks />} /> {/* Add Tasks route */}
+              <Route path="tasks" element={<Tasks />} />
             </Route>
           </Routes>
         </Router>
